@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					3009916D1F0FF2A500999B99 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2Z275P4TG4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -260,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2Z275P4TG4;
 				INFOPLIST_FILE = Gratuity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.whatilearnedtoday.Gratuity;
@@ -272,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2Z275P4TG4;
 				INFOPLIST_FILE = Gratuity/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.whatilearnedtoday.Gratuity;
