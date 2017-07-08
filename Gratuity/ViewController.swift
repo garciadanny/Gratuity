@@ -10,16 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var billAmt: UITextField!
+  @IBOutlet weak var gratuityAmt: UILabel!
+  @IBOutlet weak var totalAmt: UILabel!
+  @IBOutlet weak var gratuityControl: UISegmentedControl!
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
 
+  @IBAction func dismissKeyboardOnTap(_ sender: Any) {
+    view.endEditing(true)
+  }
 
+  @IBAction func calculateGratuity() {
+    let gratuityPercentages = [0.18, 0.20, 0.25]
+    
+    let bill = Double(billAmt.text!) ?? 0
+    let gratuity = bill * gratuityPercentages[gratuityControl.selectedSegmentIndex]
+    let total = bill + gratuity
+    
+    gratuityAmt.text = String(format: "$%.2f", gratuity)
+    totalAmt.text = String(format: "$%.2f", total)
+  }
 }
 

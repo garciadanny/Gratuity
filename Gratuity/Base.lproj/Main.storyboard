@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNl-ZV-Ffk">
-                                <rect key="frame" x="254" y="173" width="45" height="21"/>
+                                <rect key="frame" x="254" y="173" width="97" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -55,7 +55,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yya-AD-Gee">
-                                <rect key="frame" x="254" y="318" width="45" height="21"/>
+                                <rect key="frame" x="254" y="318" width="97" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -69,20 +69,41 @@
                                     <segment title="20%"/>
                                     <segment title="25%"/>
                                 </segments>
+                                <connections>
+                                    <action selector="calculateGratuity" destination="BYZ-38-t0r" eventType="valueChanged" id="Jsa-Yd-sK8"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ynu-9v-lUK">
                                 <rect key="frame" x="254" y="91" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="calculateGratuity" destination="BYZ-38-t0r" eventType="editingChanged" id="p9C-PT-ddw"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="DLR-CT-wyL" appends="YES" id="ZXs-OV-3ZZ"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Gratuity" id="Fd2-uD-JNa"/>
+                    <connections>
+                        <outlet property="billAmt" destination="Ynu-9v-lUK" id="Zqc-I0-tcJ"/>
+                        <outlet property="gratuityAmt" destination="iNl-ZV-Ffk" id="9Ae-KZ-Kdb"/>
+                        <outlet property="gratuityControl" destination="YfN-lR-kIy" id="4Dn-Y5-fSM"/>
+                        <outlet property="totalAmt" destination="Yya-AD-Gee" id="c0V-Ua-ol3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="DLR-CT-wyL">
+                    <connections>
+                        <action selector="dismissKeyboardOnTap:" destination="BYZ-38-t0r" id="Ps1-o0-ms4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="912.79999999999995" y="-545.57721139430294"/>
         </scene>
