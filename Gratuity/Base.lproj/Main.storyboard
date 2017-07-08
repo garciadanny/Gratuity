@@ -90,7 +90,13 @@
                             <outletCollection property="gestureRecognizers" destination="DLR-CT-wyL" appends="YES" id="ZXs-OV-3ZZ"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Gratuity" id="Fd2-uD-JNa"/>
+                    <navigationItem key="navigationItem" title="Gratuity" id="Fd2-uD-JNa">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="LWz-YP-3iG">
+                            <connections>
+                                <segue destination="OdN-62-2dO" kind="show" id="YS8-MX-mhg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billAmt" destination="Ynu-9v-lUK" id="Zqc-I0-tcJ"/>
                         <outlet property="gratuityAmt" destination="iNl-ZV-Ffk" id="9Ae-KZ-Kdb"/>
@@ -106,6 +112,49 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="912.79999999999995" y="-545.57721139430294"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="pac-c0-qnU">
+            <objects>
+                <viewController id="OdN-62-2dO" customClass="SettingsViewController" customModule="Gratuity" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ptg-xI-tjR"/>
+                        <viewControllerLayoutGuide type="bottom" id="iNq-vw-jej"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qz0-aO-yKW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default gratuity amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGb-l7-fxv">
+                                <rect key="frame" x="16" y="90" width="186" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gJR-vX-j19">
+                                <rect key="frame" x="16" y="154" width="296" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="setDefaultGratuity" destination="OdN-62-2dO" eventType="valueChanged" id="rEG-CY-nnH"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="vx9-d9-WBm"/>
+                    <connections>
+                        <outlet property="defaultGratuityControl" destination="gJR-vX-j19" id="M7g-au-hxs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qgV-YN-iZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1648.8" y="-546.47676161919048"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s4v-HF-mQ8">
