@@ -2,6 +2,8 @@
 
 A simple gratuity calculator for iOS.
 
+Time spent: 2 hours (on and off)
+
 ## Features
 
 - [ ] Required: Basic functionality calculates gratuity amount based on bill amount
