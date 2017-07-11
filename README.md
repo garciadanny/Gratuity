@@ -14,6 +14,15 @@ only changes if a new default value was selected. Visiting the settings view
 displays the current default gratuity amount.
 - [x] Optional: Remember the bill amount across app restarts.
 After an 10 minutes, clear the state.
+- [x] Optional: Use locale specific currency and currency thousands separator.
 
-## Demo
+## Demos
+
+**Initial Basic version**
+
 ![App Demo](demo.gif)
+
+
+** Remember bill amount across app restart & local specific currency**
+
+![Bill and currency](restore_bill_amt_localized_currency.gif)

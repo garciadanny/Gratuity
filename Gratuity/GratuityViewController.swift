@@ -8,6 +8,13 @@
 
 import UIKit
 
+extension Double {
+  var inLocalizedCurrency: String {
+    return NumberFormatter
+      .localizedString(from: NSNumber(value: self), number: .currency)
+  }
+}
+
 class GratuityViewController: UIViewController {
   
   @IBOutlet weak var billAmt: UITextField!
@@ -49,8 +56,8 @@ class GratuityViewController: UIViewController {
     let gratuity = bill * gratuityPercentages[gratuityControl.selectedSegmentIndex]
     let total = bill + gratuity
     
-    gratuityAmt.text = String(format: "$%.2f", gratuity)
-    totalAmt.text = String(format: "$%.2f", total)
+    gratuityAmt.text = gratuity.inLocalizedCurrency
+    totalAmt.text = total.inLocalizedCurrency
     
     defaults.set(bill, forKey: "storedBillAmt")
   }
