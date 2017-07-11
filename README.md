@@ -23,6 +23,6 @@ After an 10 minutes, clear the state.
 ![App Demo](demo.gif)
 
 
-** Remember bill amount across app restart & local specific currency**
+**Remember bill amount across app restart & local specific currency**
 
 ![Bill and currency](restore_bill_amt_localized_currency.gif)
