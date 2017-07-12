@@ -31,6 +31,11 @@ class GratuityViewController: UIViewController {
     setPreviousSessionData()
     defaults.addObserver(self, forKeyPath: "defaultGratuityIndex", options: .new, context: nil)
   }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    UITheme.toggle(for: view)
+  }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()

@@ -12,6 +12,7 @@
 		300991771F0FF2A500999B99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300991751F0FF2A500999B99 /* Main.storyboard */; };
 		300991791F0FF2A500999B99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300991781F0FF2A500999B99 /* Assets.xcassets */; };
 		3009917C1F0FF2A500999B99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3009917A1F0FF2A500999B99 /* LaunchScreen.storyboard */; };
+		305876CC1F15AFF900C74287 /* UITheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305876CB1F15AFF900C74287 /* UITheme.swift */; };
 		306D5D821F1136C000A02CE9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306D5D811F1136C000A02CE9 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		300991781F0FF2A500999B99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3009917B1F0FF2A500999B99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3009917D1F0FF2A500999B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		305876CB1F15AFF900C74287 /* UITheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITheme.swift; sourceTree = "<group>"; };
 		306D5D811F1136C000A02CE9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 				3009917A1F0FF2A500999B99 /* LaunchScreen.storyboard */,
 				3009917D1F0FF2A500999B99 /* Info.plist */,
 				306D5D811F1136C000A02CE9 /* SettingsViewController.swift */,
+				305876CB1F15AFF900C74287 /* UITheme.swift */,
 			);
 			path = Gratuity;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				300991741F0FF2A500999B99 /* GratuityViewController.swift in Sources */,
+				305876CC1F15AFF900C74287 /* UITheme.swift in Sources */,
 				300991721F0FF2A500999B99 /* AppDelegate.swift in Sources */,
 				306D5D821F1136C000A02CE9 /* SettingsViewController.swift in Sources */,
 			);

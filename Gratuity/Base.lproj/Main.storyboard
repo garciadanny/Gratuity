@@ -144,12 +144,29 @@
                                     <action selector="setDefaultGratuity" destination="OdN-62-2dO" eventType="valueChanged" id="rEG-CY-nnH"/>
                                 </connections>
                             </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMs-4W-A3W">
+                                <rect key="frame" x="263" y="251" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="toggleUITheme" destination="OdN-62-2dO" eventType="valueChanged" id="JOE-2W-3KX"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dark theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEt-mA-wTK">
+                                <rect key="frame" x="16" y="251" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="vx9-d9-WBm"/>
                     <connections>
                         <outlet property="defaultGratuityControl" destination="gJR-vX-j19" id="M7g-au-hxs"/>
+                        <outlet property="defaultGratuityLabel" destination="SGb-l7-fxv" id="gxA-55-bzY"/>
+                        <outlet property="themeLabel" destination="ZEt-mA-wTK" id="zfg-FV-UoG"/>
+                        <outlet property="uiThemeToggle" destination="cMs-4W-A3W" id="cBt-8Z-8jR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgV-YN-iZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
