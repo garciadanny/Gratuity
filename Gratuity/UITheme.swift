@@ -9,33 +9,56 @@
 import UIKit
 
 struct UITheme {
-  static let defaults = UserDefaults.standard
   static let systemDefaultTintColor = UIColor(red: 0, green: 0.478431, blue: 1, alpha: 1)
   
   static func toggle(for view: UIView) {
-    let isDarkTheme = defaults.bool(forKey: "defaultToDarkTheme")
+    let isDarkTheme = UserDefaults.standard.bool(forKey: "defaultToDarkTheme")
     
     if isDarkTheme {
-      view.backgroundColor = UIColor.darkGray
-      view.tintColor = UIColor.white
-      textLables(in: view).forEach { $0.textColor = UIColor.white }
+      setDarkTheme(for: view)
     } else {
-      view.backgroundColor = UIColor.white
-      view.tintColor = systemDefaultTintColor
-      textLables(in: view).forEach { $0.textColor = UIColor.black }
+      setDefaultTheme(for: view)
+    }
+  }
+  
+  private static func setDarkTheme(for view: UIView) {
+    view.backgroundColor = UIColor.darkGray
+    view.tintColor = UIColor.white
+    
+    let viewAttributes = subviews(in: view)
+    viewAttributes.labels.forEach { $0.textColor = UIColor.white }
+    viewAttributes.textFields.forEach { (field) in
+      field.backgroundColor = UIColor.darkGray
+      field.textColor = UIColor.white
+    }
+  }
+  
+  private static func setDefaultTheme(for view: UIView) {
+    view.backgroundColor = UIColor.white
+    view.tintColor = systemDefaultTintColor
+    
+    let viewAttributes = subviews(in: view)
+    viewAttributes.labels.forEach { $0.textColor = UIColor.black }
+    viewAttributes.textFields.forEach { (field) in
+      field.backgroundColor = UIColor.white
+      field.textColor = UIColor.black
     }
   }
 
-  private static func textLables(in view: UIView) -> [UILabel] {
+  private static func subviews(in view: UIView) -> (labels: [UILabel], textFields: [UITextField]) {
     var labels = [UILabel]()
+    var textFields = [UITextField]()
     
     view.subviews.forEach { (subview) in
-      if let labelView = subview as? UILabel {
+      if let textField = subview as? UITextField {
+        textFields += [textField]
+      } else if let labelView = subview as? UILabel {
         labels += [labelView]
       } else {
-        labels += textLables(in: subview)
+        labels += subviews(in: subview).labels
+        textFields += subviews(in: subview).textFields
       }
     }
-    return labels
+    return (labels: labels, textFields: textFields)
   }
 }
