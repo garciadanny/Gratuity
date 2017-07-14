@@ -15,6 +15,7 @@ displays the current default gratuity amount.
 - [x] Optional: Remember the bill amount across app restarts.
 After an 10 minutes, clear the state.
 - [x] Optional: Use locale specific currency and currency thousands separator.
+- [x] Optional: Add a light/dark color theme to the settings view.
 
 ## Demos
 
@@ -26,3 +27,7 @@ After an 10 minutes, clear the state.
 **Remember bill amount across app restart & local specific currency**
 
 ![Bill and currency](restore_bill_amt_localized_currency.gif)
+
+**Light and dark UI themes**
+
+![UI Themes](ui_themes.gif)
