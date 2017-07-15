@@ -30,6 +30,7 @@ class GratuityViewController: UIViewController {
     super.viewDidLoad()
     setPreviousSessionData()
     defaults.addObserver(self, forKeyPath: "defaultGratuityIndex", options: .new, context: nil)
+    billAmt.becomeFirstResponder()
   }
   
   override func viewWillAppear(_ animated: Bool) {

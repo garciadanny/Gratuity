@@ -16,6 +16,7 @@ displays the current default gratuity amount.
 After an 10 minutes, clear the state.
 - [x] Optional: Use locale specific currency and currency thousands separator.
 - [x] Optional: Add a light/dark color theme to the settings view.
+- [x] Optional: Make sure the keyboard is always visible and the bill amount is always the first responder.
 
 ## Demos
 
@@ -31,3 +32,8 @@ After an 10 minutes, clear the state.
 **Light and dark UI themes**
 
 ![UI Themes](ui_themes.gif)
+
+
+**Bill amount is always first responder, keyboard displays automatically**
+
+![bill first responder](bill_amt_first_responder.gif)
