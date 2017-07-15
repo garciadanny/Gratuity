@@ -2,7 +2,7 @@
 
 A simple gratuity calculator for iOS.
 
-Time spent: 2 hours (on and off)
+Time spent: 6 hours (on and off)
 
 ## Features
 
