@@ -20,20 +20,5 @@ After an 10 minutes, clear the state.
 
 ## Demos
 
-**Initial Basic version**
+![App Demo](full_demo.gif)
 
-![App Demo](demo.gif)
-
-
-**Remember bill amount across app restart & local specific currency**
-
-![Bill and currency](restore_bill_amt_localized_currency.gif)
-
-**Light and dark UI themes**
-
-![UI Themes](ui_themes.gif)
-
-
-**Bill amount is always first responder, keyboard displays automatically**
-
-![bill first responder](bill_amt_first_responder.gif)
